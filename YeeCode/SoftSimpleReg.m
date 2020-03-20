@@ -88,7 +88,10 @@ st = -0.05;
 s = 0;
 y0 = yMax/2;
 sty = 1.5*lambda;
+%set up source(s)
 bc{1}.s(1).paras = {mag,phi,omega,betap,t0,st,s,y0,sty,'s'};
+%add a new source
+bc{1}.s(2).paras = {mag,phi,omega,betap,t0*3,st,s,y0+1,sty,'s'};
 
 Plot.y0 = round(y0/dx);
 
